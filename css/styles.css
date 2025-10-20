@@ -1,0 +1,35 @@
+/* Apply Inter font and black background globally */
+        body {
+            background-color: theme('colors.primary-bg');
+            color: theme('colors.primary-text');
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        /* Custom class for the full viewport height sections, ensuring mobile responsiveness */
+        .full-screen-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+
+        /* Active link styling (optional visual feedback) */
+        .nav-link.active {
+            /* border: theme('border.secondary-accent'); */
+            color: theme('colors.secondary-accent');
+        }
+
+        .navbar-logo {
+            height: 28px;
+            width: 35px;
+            margin: 0px 5px 3px;
+        }
+
+        .hero-logo {
+            height: 44px;
+            width: 56px;
+            margin: 0 auto;
+        }

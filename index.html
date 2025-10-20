@@ -1,159 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesundhyt - Intelligent Healthcare Tech</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind to use the custom color scheme -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-bg': '#000000',
+                        'primary-text': '#FFFFFF',
+                        // Secondary color: rgb(129, 74, 200) -> #814AC8
+                        'secondary-accent': 'rgb(129, 74, 200)',
+                    },
+                    fontFamily: {
+                        sans: ['Arial', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-primary-bg text-primary-text font-sans">
 
-    <title>HealthTech Innovators | Custom Digital Solutions for Healthcare</title>
-
-    <meta name="description" content="We build secure, compliant, and patient-centric software solutions for hospitals, clinics, and biotech companies. Specializing in telehealth, EMR/EHR integration, and data analytics.">
-    <meta name="keywords" content="healthcare technology, healthtech, digital health, telehealth, EMR, EHR, HIPAA compliant software, medical software">
-
-    <link rel="stylesheet" href="css/style.css">
-
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-    </head>
-<body>
-
-    <header>
-        <div class="container">
-            <a href="index.html" id="logo">
-                <img src="images/logo.svg" alt="HealthTech Agency Logo">
+    <!-- Sticky Navbar -->
+    <header id="navbar" class="sticky top-0 z-50 w-full bg-primary-bg/90 backdrop-blur-md shadow-lg border-b border-gray-800">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <!-- Logo (Left Aligned) -->
+            <a href="#home" class="text-xl font-extrabold tracking-tight text-primary-text flex items-center">
+                <img class="navbar-logo" src="assets/img/gesundhyt-logo.png">
+                Gesundhyt
             </a>
-            
-            <nav>
-                <ul>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#case-studies">Case Studies</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#insights">Insights</a></li>
-                    <li><a href="#contact" class="cta-button">Contact Us</a></li>
-                </ul>
-            </nav>
-        </div>
+
+            <!-- Navigation Links (Right Aligned) -->
+            <div class="flex items-center space-x-6">
+                <a href="#home" data-section="home" class="nav-link text-primary-text hover:text-secondary-accent transition duration-150 p-2 rounded-lg">Home</a>
+                <a href="#about" data-section="about" class="nav-link text-primary-text hover:text-secondary-accent transition duration-150 p-2 rounded-lg">About</a>
+                <a href="#services" data-section="services" class="nav-link text-primary-text hover:text-secondary-accent transition duration-150 p-2 rounded-lg">Services</a>
+                
+                <!-- Book a Call Button -->
+                <button 
+                    class="bg-secondary-accent hover:bg-opacity-80 text-white font-semibold py-2 px-4 rounded-lg shadow-lg transition duration-300 transform hover:scale-105 active:scale-95 whitespace-nowrap"
+                    onclick="alert('Booking a call functionality would be implemented here, perhaps leading to a dedicated form or external link.')"
+                >
+                    Book a Call
+                </button>
+            </div>
+        </nav>
     </header>
 
-    <main>
-
-        <section id="hero">
-            <div class="container">
-                <h1>Innovating the Future of Patient Care</h1>
-                <p class="subtitle">We engineer secure and scalable digital health solutions that connect providers, patients, and data seamlessly.</p>
-                <a href="#contact" class="cta-button-large">Schedule a Consultation</a>
-            </div>
-        </section>
-
-        <section id="services">
-            <div class="container">
-                <h2>Our Core Expertise</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <h3>Custom Software Development</h3>
-                        <p>HIPAA/GDPR compliant web and mobile applications, patient portals, and clinical trial management systems.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>Telehealth & mHealth Solutions</h3>
-                        <p>Developing secure video consultation platforms and mobile health apps for remote patient monitoring and engagement.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>EHR/EMR Integration & Interoperability</h3>
-                        <p>Connecting disparate systems using standards like HL7 and FHIR to create a unified view of patient data.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3>Healthcare Data & AI</h3>
-                        <p>Leveraging data analytics and machine learning for predictive modeling, population health insights, and operational efficiency.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="case-studies">
-            <div class="container">
-                <h2>Transforming Healthcare Delivery</h2>
-                <div class="case-study-grid">
-                    <article class="case-study-card">
-                        <img src="images/case-study-1.jpg" alt="A descriptive image of the project">
-                        <h3>Project: Telemedicine Platform for a Major Hospital Network</h3>
-                        <p>Increased patient reach by 300% while maintaining enterprise-level security and data privacy.</p>
-                        <a href="/case-studies/project-1">Read More &rarr;</a>
-                    </article>
-                    <article class="case-study-card">
-                        <img src="images/case-study-2.jpg" alt="A descriptive image of the project">
-                        <h3>Project: AI-Powered Diagnostics for a Biotech Startup</h3>
-                        <p>Developed an algorithm to improve diagnostic accuracy by 40%, now undergoing clinical trials.</p>
-                        <a href="/case-studies/project-2">Read More &rarr;</a>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="about">
-            <div class="container">
-                <h2>Built for Healthcare, By Experts</h2>
-                <p>Our team consists of not just developers, but also professionals with backgrounds in clinical practice, medical research, and healthcare policy. We understand the unique challenges and regulatory complexities of your industry.</p>
-                <ul>
-                    <li><strong>Compliance First:</strong> We build with HIPAA, GDPR, and other regulations at the core of our architecture.</li>
-                    <li><strong>Human-Centered Design:</strong> Our solutions are intuitive for both clinicians and patients.</li>
-                    <li><strong>Scalable & Secure:</strong> Robust infrastructure that grows with your needs and protects sensitive data.</li>
-                </ul>
-            </div>
-        </section>
-        
-        <section id="contact">
-            <div class="container">
-                <h2>Ready to Build the Future of Health?</h2>
-                <p>Let's discuss how our technological expertise can help you achieve your goals. Reach out for a no-obligation consultation.</p>
-                <form action="/submit-form" method="POST">
-                    <label for="name">Full Name:</label>
-                    <input type="text" id="name" name="name" required>
-
-                    <label for="email">Work Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    
-                    <label for="company">Company/Organization:</label>
-                    <input type="text" id="company" name="company">
-
-                    <label for="message">How can we help?</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <img src="images/logo-footer.svg" alt="HealthTech Agency Logo">
-                    <p>Building a healthier future through technology.</p>
-                    <p>123 Health-Tech Ave, Suite 100<br>Med-City, MC 54321</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#case-studies">Case Studies</a></li>
-                        <li><a href="/careers">Careers</a></li>
-                        <li><a href="/privacy-policy">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact Us</h4>
-                    <p>Email: <a href="mailto:contact@healthtechinnovators.com">contact@healthtechinnovators.com</a></p>
-                    <p>Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 HealthTech Innovators. All Rights Reserved.</p>
+    <!-- 1. Home Section (Hero) -->
+    <section id="home" class="full-screen-section text-center">
+        <div class="space-y-6 max-w-4xl">
+            <!-- <img class="hero-logo" src="assets/img/gesundhyt-logo.png"> -->
+            <h1 class="text-6xl sm:text-7xl lg:text-8xl font-extrabold leading-tight tracking-tighter">
+                <span class="text-primary-text">Intelligent Healthcare Tech </span>
+                <span class="text-secondary-accent">for Modern Businesses</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-400">
+                Gesundhyt brings cutting-edge tech in your hands.
+            </p>
+            <div class="flex justify-center space-x-4 pt-8">
+                <!-- Button 1: Get in touch (Secondary color background) -->
+                <a href="#about" class="button-primary bg-secondary-accent hover:bg-opacity-80 text-white font-bold py-3 px-8 rounded-xl transition duration-300 shadow-xl transform hover:-translate-y-1">
+                    Get in touch
+                </a>
+                <!-- Button 2: View Services (Black background with outline) -->
+                <a href="#services" class="button-secondary bg-primary-bg border-2 border-white hover:border-secondary-accent text-white font-bold py-3 px-8 rounded-xl transition duration-300 transform hover:-translate-y-1">
+                    View Services
+                </a>
             </div>
         </div>
-    </footer>
+    </section>
 
-    <script src="js/main.js"></script>
+    <!-- 2. About Section -->
+    <section id="about" class="full-screen-section bg-gray-950">
+        <div class="max-w-4xl mx-auto text-center space-y-6">
+            <h2 class="text-5xl font-extrabold text-secondary-accent">About Gesundhyt</h2>
+            <p class="text-xl text-gray-300">
+                We are a dedicated team transforming the healthcare industry through advanced AI and robust data analytics. Our mission is to provide scalable, secure, and smart solutions that empower healthcare providers to deliver better patient outcomes and streamline operational efficiency.
+            </p>
+            <p class="text-md text-gray-500">
+                From predictive diagnostic tools to automated patient engagement platforms, we are committed to moving healthcare into the future, today.
+            </p>
+            <a href="#services" class="text-secondary-accent hover:underline inline-block mt-4">See our core values &rarr;</a>
+            [Image of a modern, clean healthcare office with screens]
+        </div>
+    </section>
+
+    <!-- 3. Services Section -->
+    <section id="services" class="full-screen-section">
+        <div class="max-w-6xl mx-auto space-y-10">
+            <h2 class="text-5xl font-extrabold text-center text-secondary-accent">Our Cutting-Edge Services</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="p-6 bg-gray-900 rounded-xl shadow-2xl border border-gray-800 hover:border-secondary-accent transition duration-300 space-y-4">
+                    <div class="text-secondary-accent text-3xl font-bold">Data Analytics</div>
+                    <p class="text-gray-300">
+                        Harness the power of medical data with secure, compliant analysis to identify trends and improve decision-making.
+                    </p>
+                    <button class="text-white border border-secondary-accent px-4 py-2 rounded-lg hover:bg-secondary-accent/20 transition">Learn More</button>
+                </div>
+                <!-- Service Card 2 -->
+                <div class="p-6 bg-gray-900 rounded-xl shadow-2xl border border-gray-800 hover:border-secondary-accent transition duration-300 space-y-4">
+                    <div class="text-secondary-accent text-3xl font-bold">AI Diagnostics</div>
+                    <p class="text-gray-300">
+                        Implement machine learning models to assist in early detection and accurate diagnosis of complex conditions.
+                    </p>
+                    <button class="text-white border border-secondary-accent px-4 py-2 rounded-lg hover:bg-secondary-accent/20 transition">Learn More</button>
+                </div>
+                <!-- Service Card 3 -->
+                <div class="p-6 bg-gray-900 rounded-xl shadow-2xl border border-gray-800 hover:border-secondary-accent transition duration-300 space-y-4">
+                    <div class="text-secondary-accent text-3xl font-bold">Patient Portals</div>
+                    <p class="text-gray-300">
+                        Secure, modern, and intuitive digital platforms for enhanced patient communication and administrative ease.
+                    </p>
+                    <button class="text-white border border-secondary-accent px-4 py-2 rounded-lg hover:bg-secondary-accent/20 transition">Learn More</button>
+                </div>
+            </div>
+            <p class="text-center text-gray-500 pt-4">Ready to move forward? <button onclick="alert('Booking call action triggered')" class="text-secondary-accent font-semibold hover:underline">Book a Call today.</button></p>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section');
+
+            // Function to handle smooth scrolling
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        // Use scrollIntoView with smooth behavior for polyfill-like behavior (even though CSS handles it)
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+
+                        // Manually update the URL hash without triggering a jump
+                        history.pushState(null, null, targetId);
+                    }
+                });
+            });
+
+            // Intersection Observer for highlighting the active nav link
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                // A threshold of 0.5 means when 50% of the section is visible, it's considered active
+                threshold: 0.5
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Remove 'active' class from all links
+                        navLinks.forEach(link => link.classList.remove('active'));
+
+                        // Find the link corresponding to the intersecting section and add 'active' class
+                        const activeSectionId = entry.target.id;
+                        const activeLink = document.querySelector(`.nav-link[href="#${activeSectionId}"]`);
+                        if (activeLink) {
+                            activeLink.classList.add('active');
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            // Observe each section
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+            
+            // Initial setting for 'Home' link on page load
+            document.querySelector('.nav-link[href="#home"]').classList.add('active');
+        });
+    </script>
 
 </body>
 </html>
