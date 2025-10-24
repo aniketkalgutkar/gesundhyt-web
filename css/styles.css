@@ -33,3 +33,7 @@
             width: 56px;
             margin: 0 auto;
         }
+
+        .new-orange-bg {
+          background-color: rgb(249, 115, 22);
+        }
